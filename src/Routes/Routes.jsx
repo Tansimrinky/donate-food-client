@@ -8,6 +8,7 @@ import AddFood from "../Pages/AddFood/AddFood";
 import AvailableFoods from "../Pages/AvailableFoods/AvailableFoods";
 import Details from "../Pages/Details/Details";
 import DetailedCard from "../Componenets/DetailedCard/DetailedCard";
+import ManageMyFood from "../Pages/ManageMyFood/ManageMyFood";
 
 const router = createBrowserRouter([
     {
@@ -44,7 +45,12 @@ const router = createBrowserRouter([
         {
           path: '/food/:_id',
           element: <PrivateRoute><DetailedCard></DetailedCard></PrivateRoute>,
-          loader: () => fetch('/http://localhost:5000/foods')
+          loader: () => fetch('http://localhost:5000/foods')
+        },
+        {
+          path: '/managemyfoods',
+          element: <PrivateRoute><ManageMyFood></ManageMyFood></PrivateRoute>,
+          loader: () => fetch('http://localhost:5000/foods')
         }
       ]
     },

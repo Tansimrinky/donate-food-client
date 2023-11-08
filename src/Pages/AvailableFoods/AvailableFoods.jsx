@@ -36,7 +36,7 @@ const AvailableFoods = () => {
       <input
         type="text"
         placeholder="Search by food name"
-        value={filterText}
+        defaultValue={filterText}
         className="input input-bordered w-full max-w-xs "
         onChange={(e) => setFilterText(e.target.value)}
       />
