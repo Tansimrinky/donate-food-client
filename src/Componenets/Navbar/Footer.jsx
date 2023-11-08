@@ -4,13 +4,13 @@ const Footer = () => {
         
         
      
-      <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
-      <aside className="items-center grid-flow-col ">
-         <img className="w-[100px] h-[50px] rounded"  src="https://i.ibb.co/1q2c67y/Food-Logo-Graphics-5365253-1-580x386.jpg" alt="" />
-          <p className="font-bold">
+      <footer className="flex justify-between p-10 footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+      <div className="items-center flex justify-between ">
+         <img className="h-[100px] w-[100px] rounded"  src="https://i.ibb.co/CmW84Cd/download.png" alt="" />
+          <p className="font-bold text-5xl">
           Food<span className="text-green-500">First</span>
           </p>
-        </aside>
+        </div>
       <nav className="text-left text-slate-600">
           <header className="footer-title">Contact Info:</header>
           <div className="">

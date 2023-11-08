@@ -19,6 +19,8 @@ const Register = () => {
         const photo = form.get('Photo')
         const email = form.get('email')
         const password = form.get('password')
+        const user = { name, photo, email, password}
+        console.log(user)
         if(!/[A-Z]/.test(password)){
           Swal.fire('Your Password should have at least one Uppercase character. ')
           return
