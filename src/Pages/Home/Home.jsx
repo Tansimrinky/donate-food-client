@@ -1,6 +1,8 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../../Componenets/Banner/Banner";
 import FeaturedFoods from "../../Componenets/FeaturedFoods/FeaturedFoods";
+import OurGoal from "../../Componenets/OurGoal/OurGoal";
+import Memories from "../../Componenets/Memories/Memories";
 
 
 
@@ -26,6 +28,8 @@ const Home = () => {
             <div className="flex justify-center mb-8">
             <Link to="/availablefoods"><button className="btn bg-green-500 text-white font-bold flex justify-center items-center">Show All Foods</button></Link>
             </div>
+            <OurGoal></OurGoal>
+            <Memories></Memories>
         </div>
     );
 };
