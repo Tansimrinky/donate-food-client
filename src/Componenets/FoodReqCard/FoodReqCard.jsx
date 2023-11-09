@@ -8,7 +8,7 @@ const FoodReqCard = ({ foodReq }) => {
   const { _id,  donatorName, location, ExDate, reqDate, Money } = foodReq || {}
 
   const handleCancelReq = () => {
-    fetch(`http://localhost:5000/reqfood/${_id}`, {
+    fetch(`https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/reqfood/${_id}`, {
         method: 'DELETE'
     })
     .then(res => res.json())

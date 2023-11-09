@@ -41,7 +41,7 @@ const DetailedCard = ({ detail }) => {
     const reqFood = { foodName, foodImg, donatorEmail, donatorName, reqEmail, reqName, reqImg, reqDate, location, ExDate, Info, Money}
     console.log(reqFood)
 
-    fetch('http://localhost:5000/reqfood', {
+    fetch('https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/reqfood', {
         method: 'POST',
         headers: {
             'content-type' : 'application/json'

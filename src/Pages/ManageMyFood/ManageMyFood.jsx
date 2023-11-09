@@ -201,7 +201,7 @@ const ManageMyFood = () => {
          const DonatorImage = form.donatorImg.value;
         const updatedFood = { foodName, foodImg, foodQuantity, Location, ExDate, Info, donatorName, donatorEmail , DonatorImage}
         console.log(updatedFood)
-        fetch(`http://localhost:5000/foods/${id}`,{
+        fetch(`https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/foods/${id}`,{
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'
@@ -249,7 +249,7 @@ const ManageMyFood = () => {
           confirmButtonText: 'Yes, delete it!',
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:5000/foods/${id}`, {
+            fetch(`https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/foods/${id}`, {
               method: 'DELETE',
             })
               .then((res) => res.json())
