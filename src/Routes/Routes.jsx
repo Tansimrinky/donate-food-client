@@ -12,11 +12,13 @@ import ManageMyFood from "../Pages/ManageMyFood/ManageMyFood";
 import ManageSingleFood from "../Pages/ManageSingleFood/ManageSingleFood";
 import ManageSingleCard from "../Componenets/ManageSingleCard/ManageSingleCard";
 import MyFoodReq from "../Pages/MyFoodReq/MyFoodReq";
+import Error from "../Pages/Error/Error";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <Error></Error>,
       children: [
         {
             path: '/',
