@@ -30,9 +30,9 @@ const DetailedCard = ({ detail }) => {
     const foodImg = form.get("foodImg")
     const donatorEmail = form.get("donatorEmail")
     const donatorName = form.get("donatorName")
-    const reqEmail = form.get("reqEmail")
     const reqName = user.displayName;
     const reqImg = user.photoURL;
+    const reqEmail = user.email;
     const reqDate = form.get("reqDate")
     const location = form.get("location")
     const ExDate = form.get("ExDate")

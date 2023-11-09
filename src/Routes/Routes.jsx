@@ -9,6 +9,9 @@ import AvailableFoods from "../Pages/AvailableFoods/AvailableFoods";
 import Details from "../Pages/Details/Details";
 import DetailedCard from "../Componenets/DetailedCard/DetailedCard";
 import ManageMyFood from "../Pages/ManageMyFood/ManageMyFood";
+import ManageSingleFood from "../Pages/ManageSingleFood/ManageSingleFood";
+import ManageSingleCard from "../Componenets/ManageSingleCard/ManageSingleCard";
+import MyFoodReq from "../Pages/MyFoodReq/MyFoodReq";
 
 const router = createBrowserRouter([
     {
@@ -54,7 +57,18 @@ const router = createBrowserRouter([
         },
         {
           path: '/manage/:id',
-          element: <PrivateRoute></PrivateRoute>
+          element: <PrivateRoute><ManageSingleFood></ManageSingleFood></PrivateRoute>,
+          loader: () => fetch('http://localhost:5000/reqfood')
+        },
+        {
+          path: '/manage/:id',
+          element: <PrivateRoute><ManageSingleCard></ManageSingleCard></PrivateRoute>,
+          loader: () => fetch('http://localhost:5000/foods')
+        },
+        {
+          path: '/foodrequest',
+          element: <PrivateRoute><MyFoodReq></MyFoodReq></PrivateRoute>,
+          loader: () => fetch('http://localhost:5000/reqfood')
         }
         
       ]
