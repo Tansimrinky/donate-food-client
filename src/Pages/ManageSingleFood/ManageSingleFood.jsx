@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import ManageSingleCard from "../../Componenets/ManageSingleCard/ManageSingleCard";
 
+
 const ManageSingleFood = () => {
   const requestedFood = useLoaderData();
   console.log(requestedFood);

@@ -1,5 +1,6 @@
 
 import  {useState, useEffect} from "react"
+import Swal from "sweetalert2";
 
 const ManageSingleCard = ({ reqFood }) => {
   const { foodName,   reqName, reqImg, reqEmail, reqDate } = reqFood || {};
@@ -24,18 +25,19 @@ const ManageSingleCard = ({ reqFood }) => {
       const filteredFood = AllFoods.filter((food) => food.foodName === foodName);
       if (filteredFood.length > 0) {
         const id = filteredFood[0]._id;
-        console.log(id);
 
         fetch(`https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/foods/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
-          .then((data) => {
-            setStatus(data);
-          });
-      }
-    }
+          .then(data => {
+            if(data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your food request has been deleted.", "success")
+            }
+          })
   };
+}
+  }
   return (
     <div className="">
       <div className="card w-96 bg-base-100 shadow-xl">

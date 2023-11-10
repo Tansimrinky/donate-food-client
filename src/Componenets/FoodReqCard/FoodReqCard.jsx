@@ -1,9 +1,9 @@
-import {useState} from 'react'
+
+import Swal from 'sweetalert2';
 
 
 const FoodReqCard = ({ foodReq }) => {
 
-    const [deleted, setDeleted] = useState()
     console.log(foodReq)
   const { _id,  donatorName, location, ExDate, reqDate, Money } = foodReq || {}
 
@@ -13,7 +13,9 @@ const FoodReqCard = ({ foodReq }) => {
     })
     .then(res => res.json())
     .then(data => {
-        setDeleted(data)
+      if (data.deletedCount > 0) {
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
     })
   }
 
@@ -21,8 +23,8 @@ const FoodReqCard = ({ foodReq }) => {
     <div>
       {
          <div className="card w-96 bg-base-100 shadow-xl">
-        <div className="card-body">
-          <h2 className="card-title">Donar Name:{donatorName}</h2>
+        <div className="card-body text-xl font-bold">
+          <h2 className="card-title text-2xl">Donar Name:{donatorName}</h2>
           <p>Pickup Location:{location}</p>
           <p>Expire Date:{ExDate}</p>
           <p>Request Date:{reqDate}</p>
