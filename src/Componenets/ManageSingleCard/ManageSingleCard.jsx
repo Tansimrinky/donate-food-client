@@ -6,7 +6,7 @@ const ManageSingleCard = ({ reqFood }) => {
   const [AllFoods, setAllFoods] = useState()
   const [status, setStatus] = useState()
   useEffect( () => {
-    fetch("https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/foods")
+    fetch("https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/foods")
    .then(res => res.json())
    .then(data => {
      console.log(data)
@@ -26,7 +26,7 @@ const ManageSingleCard = ({ reqFood }) => {
         const id = filteredFood[0]._id;
         console.log(id);
 
-        fetch(`https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/foods/${id}`, {
+        fetch(`https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/foods/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

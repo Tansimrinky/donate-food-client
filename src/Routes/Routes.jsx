@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: () => fetch('https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/foods')
+            loader: () => fetch('https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/foods')
         },
         {
             path: '/login',
@@ -40,37 +40,37 @@ const router = createBrowserRouter([
         {
           path: '/availablefoods',
           element: <AvailableFoods></AvailableFoods>,
-          loader: () => fetch('https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/foods')
+          loader: () => fetch('https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/foods')
         },
         {
           path: '/food/:_id',
           element: <PrivateRoute><Details></Details></PrivateRoute>,
-          loader: () => fetch('https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/foods')
+          loader: () => fetch('https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/foods')
         },
         {
           path: '/food/:_id',
           element: <PrivateRoute><DetailedCard></DetailedCard></PrivateRoute>,
-          loader: () => fetch('https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/foods')
+          loader: () => fetch('https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/foods')
         },
         {
           path: '/managemyfoods',
           element: <PrivateRoute><ManageMyFood></ManageMyFood></PrivateRoute>,
-          loader: () => fetch('https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/foods')
+          loader: () => fetch('https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/foods')
         },
         {
           path: '/manage/:id',
           element: <PrivateRoute><ManageSingleFood></ManageSingleFood></PrivateRoute>,
-          loader: () => fetch('https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/reqfood')
+          loader: () => fetch('https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/reqfood')
         },
         {
           path: '/manage/:id',
           element: <PrivateRoute><ManageSingleCard></ManageSingleCard></PrivateRoute>,
-          loader: () => fetch('https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/foods')
+          loader: () => fetch('https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/foods')
         },
         {
           path: '/foodrequest',
           element: <PrivateRoute><MyFoodReq></MyFoodReq></PrivateRoute>,
-          loader: () => fetch('https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/reqfood')
+          loader: () => fetch('https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/reqfood')
         }
         
       ]

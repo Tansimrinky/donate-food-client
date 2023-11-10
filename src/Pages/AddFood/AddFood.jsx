@@ -23,7 +23,7 @@ const AddFood = () => {
 
         console.log(addedFood)
 
-        fetch('https://food-donate-server-pvbq58vk8-tansimrinky.vercel.app/foods', {
+        fetch('https://food-donate-server-cohyaoia5-tansimrinky.vercel.app/foods', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

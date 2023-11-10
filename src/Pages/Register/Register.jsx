@@ -60,17 +60,17 @@ const Register = () => {
             // style={{backgroundImage: "url('https://i.ibb.co/Wvqh8BG/images-1.jpg')"}}
             
             
-            className="sm:h-[700px] lg:h-screen bg-slate-500 bg-cover">
+            className="sm:h-[700px] lg:h-screen bg-slate-200 bg-cover">
         <div className="hero h-fit">
           <div className="hero-content flex-col ">
             <div className="text-center lg:text-left">
-              <h1 className="text-5xl font-bold text-white">Register Now</h1>
+              <h1 className="text-5xl font-bold text-green-900">Register Now</h1>
             </div>
             <div className="card flex-shrink-0  lg:w-[500px] shadow-2xl bg-blur">
               <form onSubmit={handleRegister} className="card-body ">
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text text-white text-bold text-5xl">Name</span>
+                    <span className="label-text text-green-900 text-bold text-5xl">Name</span>
                   </label>
                   <input
                     type="text"
@@ -82,7 +82,7 @@ const Register = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text text-white text-bold text-5xl">Photo URL</span>
+                    <span className="label-text text-green-900 text-bold text-5xl">Photo URL</span>
                   </label>
                   <input
                     type="url"
@@ -94,7 +94,7 @@ const Register = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text text-white text-bold text-5xl">Email</span>
+                    <span className="label-text text-green-900 text-bold text-5xl">Email</span>
                   </label>
                   <input
                     type="email"
@@ -106,7 +106,7 @@ const Register = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text text-white text-bold text-5xl">Password</span>
+                    <span className="label-text text-green-900 text-bold text-5xl">Password</span>
                   </label>
                   <input
                     type="password"
@@ -117,9 +117,9 @@ const Register = () => {
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn text-3xl text-bold">Register</button>
+                  <button className="btn bg-green-500 text-white  text-3xl text-bold">Register</button>
                 </div>
-                <p className="text-white">Already have an account? PLease <Link className="underline" to="/login">Log in</Link>.</p>
+                <p className="text-green-900">Already have an account? PLease <Link className="underline text-red-700" to="/login">Log in</Link>.</p>
               </form>
               
             </div>

@@ -36,7 +36,6 @@ const Login = () => {
       googleSignIn()
         .then((result) => {
           Swal.fire("Successfullly logged in..");
-          // return(result.user)
           console.log(result.user);
         })
         .catch((error) => {
@@ -48,30 +47,33 @@ const Login = () => {
         });
     };
     return (
-        <div>
-      <div style={{backgroundImage: "url('https://i.ibb.co/Wvqh8BG/images-1.jpg')"}}  className="h-screen bg-cover ">
+        <div className="flex justify-around bg-slate-200 items-center">
+          <div>
+             <img src="https://i.ibb.co/tLYNzVG/man-donating-food-5383932-4530159.webp" alt="" />
+          </div>
+          <div   className="h-screen bg-cover ">
         <div className="hero min-h-screen ">
           <div className="hero-content flex-col ">
             <div className="text-center lg:text-left">
-              <h1 className="text-5xl font-bold text-white">Login now!</h1>
+              <h1 className="text-5xl font-bold text-green-900">Login now!</h1>
             </div>
             <div className="card flex-shrink-0 w-[400px] shadow-2xl bg-blur">
-              <form onSubmit={handleLogIn} className="card-body">
+              <form onSubmit={handleLogIn} className="card-body ">
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text text-white text-bold text-5xl">Email</span>
+                    <span className="label-text text-green-900 text-bold text-5xl">Email</span>
                   </label>
                   <input
                     type="email"
                     placeholder="Email"
                     name="email"
-                    className="input  bg-blur "
+                    className="input  "
                     required
                   />
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text text-white text-bold text-5xl">Password</span>
+                    <span className="label-text text-green-900 text-bold text-5xl">Password</span>
                   </label>
                   <input
                     type="password"
@@ -82,23 +84,23 @@ const Login = () => {
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn  text-black">Login</button>
+                  <button className="btn  bg-green-500 text-white border-none font-bold">Login</button>
                 </div>
-                <p className="text-white">
+                <p className="text-green-900">
                   {" "}
                   Do not have an account? Please{" "}
-                  <Link className="underline" to="/register">
+                  <Link className="underline text-red-500" to="/register">
                     Register
                   </Link>
                 </p>
               </form>
               <hr />
-              <p className="text-3xl font-medium text-white text-center mt-3">
+              <p className="text-3xl font-medium text-green-900 text-center mt-3">
                 Alternative log in option
               </p>
               <button
                 onClick={handleGoogle}
-                className="items-center pl-36 border w-3/4 ml-10 m-5"
+                className="items-center pl-36 border-none w-3/4 ml-10 m-5"
               >
                 <FcGoogle className="h-[50px] w-[50px]"></FcGoogle>
               </button>
@@ -106,6 +108,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      
     </div>
     );
 };
