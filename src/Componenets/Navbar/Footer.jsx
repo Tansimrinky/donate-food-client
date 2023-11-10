@@ -53,7 +53,7 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-          <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+          <p>Copyright © 2023 - All right reserved by FoodFIrst Organization</p>
         </nav>
       </footer>
     </div>
