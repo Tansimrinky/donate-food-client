@@ -20,7 +20,7 @@ const FoodReqCard = ({ foodReq }) => {
   return (
     <div>
       {
-        deleted ? <div className="card w-96 bg-base-100 shadow-xl">
+         <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
           <h2 className="card-title">Donar Name:{donatorName}</h2>
           <p>Pickup Location:{location}</p>
@@ -31,7 +31,7 @@ const FoodReqCard = ({ foodReq }) => {
             <button onClick={handleCancelReq} className="btn btn-primary bg-green-500 text-white font-bold border-none">Cancel Request</button>
           </div>
         </div>
-      </div> : <div>No Data Found</div>
+      </div> 
       }
     </div>
   );

@@ -19,13 +19,13 @@ const ManageSingleFood = () => {
   return (
     <div className="h-screen">
       {
-      filteredReqFood ? <div className="mb-45">
+      filteredReqFood.length > 0 ? <div className="mb-45">
       <div className="mb-45">
       {
          filteredReqFood.map(reqFood => <ManageSingleCard key={reqFood._id} reqFood={reqFood}></ManageSingleCard> )
       }
       </div>
-     </div> : <div>No requested food found</div>
+     </div> : ( <div className="text-center pt-96 text-slate-700 font-bold">Your Food is not requested yet</div> )
     }
     </div>
   );
