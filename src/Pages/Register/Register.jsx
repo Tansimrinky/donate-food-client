@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import Swal from 'sweetalert2';
 import { updateProfile } from "firebase/auth";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -54,7 +55,11 @@ const Register = () => {
      }
 
     return (
-        <div className="my-5">
+       <div>
+        <Helmet>
+          <title>FoodFirst | register</title>
+        </Helmet>
+         <div className="my-5">
             <div
             
             // style={{backgroundImage: "url('https://i.ibb.co/Wvqh8BG/images-1.jpg')"}}
@@ -127,6 +132,7 @@ const Register = () => {
         </div>
       </div>
         </div>
+       </div>
     );
 };
 

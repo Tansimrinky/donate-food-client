@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -10,6 +11,7 @@ const Login = () => {
 
     const { signIn , googleSignIn } = useContext(AuthContext);
     const location = useLocation();
+    console.log(location)
     const navigate = useNavigate();
   
     const handleLogIn = (e) => {
@@ -47,7 +49,11 @@ const Login = () => {
         });
     };
     return (
-        <div className="flex justify-around bg-slate-200 items-center">
+       <div>
+        <Helmet>
+          <title>FoodFirst | login</title>
+        </Helmet>
+         <div className="flex justify-around bg-slate-200 items-center">
           <div>
              <img src="https://i.ibb.co/tLYNzVG/man-donating-food-5383932-4530159.webp" alt="" />
           </div>
@@ -110,6 +116,7 @@ const Login = () => {
       </div>
       
     </div>
+       </div>
     );
 };
 

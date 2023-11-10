@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext } from "react";
 import FoodReqCard from "../../Componenets/FoodReqCard/FoodReqCard";
+import { Helmet } from "react-helmet-async";
 
 const MyFoodReq = () => {
 
@@ -15,6 +16,9 @@ const MyFoodReq = () => {
     console.log(filteredFood)
     return (
         <div >
+            <Helmet>
+                <title>FoodFirst | My Food Request</title>
+            </Helmet>
             <h2 className="text-5xl font-bold text-center">My Food Request</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between"> 
             {

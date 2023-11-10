@@ -3,6 +3,7 @@ import Banner from "../../Componenets/Banner/Banner";
 import FeaturedFoods from "../../Componenets/FeaturedFoods/FeaturedFoods";
 import OurGoal from "../../Componenets/OurGoal/OurGoal";
 import Memories from "../../Componenets/Memories/Memories";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -18,6 +19,9 @@ const Home = () => {
     console.log(topSixFoods)
     return (
         <div>
+            <Helmet>
+                <title>FoodFirst | Home</title>
+            </Helmet>
             <Banner></Banner>
             <h2 className="text-center text-5xl font-bold mt-7 mb-7">Featured Foods</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between">

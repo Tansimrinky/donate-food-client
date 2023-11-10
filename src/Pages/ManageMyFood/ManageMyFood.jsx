@@ -4,6 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { useTable } from 'react-table';
 import { Footer } from "flowbite-react";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const ManageMyFood = () => {
     const allFoods = useLoaderData();
@@ -274,6 +275,9 @@ const ManageMyFood = () => {
 
     return (
            <div>
+            <Helmet>
+              <title>FoodFirst | manage my food</title>
+            </Helmet>
             {
               filteredFood ? <div className="h-screen">
               <table {...getTableProps()} className="w-full border-4 border-t-2 ">
